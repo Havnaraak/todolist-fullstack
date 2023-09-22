@@ -15,7 +15,9 @@ const createTask =  async (task) => {
         [title, "pendente", dateUtc]
     );
 
-    return {insertId: createdTask[0].insertId};
+    const { insertId } = createdTask;
+
+    return {insertId};
 };
 
 const deleteTask = async (id) => {
